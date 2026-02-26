@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: 'Arial', sans-serif;
+      }
+
+      #app {
+        text-align: center;
+      }
+
+      h1 {
+        color: white;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      canvas {
+        border: 3px solid white;
+        background: #1a1a1a;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+
+      .controls {
+        color: white;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .score {
+        color: white;
+        font-size: 18px;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      .buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background: white;
+        color: #667eea;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.2s;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DrOswoV1.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>🐍 Snake Game</h1>
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+      <div class="score">
+        Score: <span id="score">0</span>
+      </div>
+      <div class="controls">
+        <p>Use Arrow Keys or WASD to move</p>
+        <p>Space to pause/resume</p>
+      </div>
+      <div class="buttons">
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
