@@ -5,6 +5,7 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     cssCodeSplit: false,
+    outDir: 'docs',
   },
   server: {
     port: 5173,
