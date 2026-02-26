@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: '/snake-game/',
   build: {
     target: 'esnext',
     minify: 'terser',
